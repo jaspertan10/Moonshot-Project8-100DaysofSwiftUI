@@ -34,7 +34,9 @@ struct ContentView: View {
             .preferredColorScheme(.dark)
             .toolbar {
                 Button(showingGrid ? "List" : "Grid") {
-                    showingGrid.toggle()
+                    withAnimation {
+                        showingGrid.toggle()
+                    }
                 }
             }
         }
